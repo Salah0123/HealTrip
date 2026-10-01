@@ -1,0 +1,20 @@
+@HealTrip.Api_HostAddress = http://localhost:5261
+
+GET {{HealTrip.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{HealTrip.Api_HostAddress}}/api/doctors/search?specialty=Cardiology&city=Riyadh
+Accept: application/json
+
+###
+
+POST {{HealTrip.Api_HostAddress}}/api/chat
+Accept: application/json
+Content-Type: application/json
+{
+  "conversationId": "test-emergency-001",
+  "message": "I need a cardiologist in Riyadh"
+}
+
+###
